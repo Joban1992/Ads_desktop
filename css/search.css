@@ -1,0 +1,17 @@
+.search-box-local-changes{
+  position:static;
+  text-align:center;
+  background:#fff;
+}
+.search-box-local-changes span{
+  border: 2px solid #545454;
+}
+.search-box-local-changes span input[type=text]{
+  color:black;
+}
+::-webkit-input-placeholder {
+  color: #eee;
+}
+.search-result-container{
+  background: #f7f7f7;
+}

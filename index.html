@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/common.css" rel="stylesheet" type="text/css" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+  <div class="overlay">
+  </div>
+  <div class="row action-container">
+    <div class="col-l4 offset-l4 col-m8 offset-m2 col-s12 action-bar">
+	  <span>Serach By</span>
+	    <ul>
+	      <li class="action-item"><i class="icon-img icon ion-ios-person"></i>Name</li>
+		  <li class="action-item"><i class="icon-img icon ion-bookmark"></i>Unique Identifire</li>
+		  <li class="action-item"><i class="icon-img icon ion-location"></i>Address</li>
+	    </ul>
+	</div>
+  </div>
+  <div class="container">
+	<div class="row header">
+	  <div class="col-l6 col-m16 col-s6" >
+	    <span class="float-left medium-large-logo">
+		  Logo Large
+		</span>
+		<span class="float-left small-logo">
+		  Logo Small
+		</span>
+	  </div>
+	  <div class="col-l6 col-m6 col-s6 float-right" >
+	    <span class="float-right">Menu</span>
+	  </div>
+	</div>
+	<div class="row desc">
+	   <!--<div style="background:red;height:100%;width:100%;position:absolute;"></div>-->
+	   <div class="col-l12 col-m12 col-s12">
+	      <div class="row">
+		    <div class="col-l12 col-m12 col-s12">
+	          <strong style="font-size:2.2em;"> Whats on your mind</strong>
+		      <br>
+		      <span style="font-size:1.2em;">Search here</span>
+		    </div>
+		  </div>
+	      <!--<div class="row">
+		     <div class="col-l12 col-m12 col-s12" style="text-align:center;">
+		       <span class="sel-pro active"  onclick="changeActive(this,'sel-pro')">CGI</span>
+			   <span class="sel-pro"  onclick="changeActive(this,'sel-pro')">Gold</span>
+		     </div>
+		  </div>--->
+		  <div class="row search-box-new">
+		    <div class="col-l12 col-m12 col-s12"> 
+		       <span>
+			     <form onsubmit="return getActionBar()" style="padding:0;margin:0;">
+		           <input type="text" placeholder="Search Here">
+			       <i class="search-icon"></i>
+			     </form>
+			   </span>
+	        </div>
+		  </div>
+	   </div>
+	</div>
+	<div class="row list-part">
+	    <div class="col-l12 col-m12 col-s12" style="background: #fff;border-bottom: 2px solid #efeeee; background: url(images/text-bg.png);background-size:contain;">
+		    <div class="tag-line">
+		      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
+		    </div>
+		</div>
+		
+		<div class="row recent-search">
+	      <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad1">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+	      <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad2">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+	      <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad3">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+		  <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad1">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+	   </div>
+	    <!--<div class="col-l12 col-m12 col-s12" style="background: #fff;border-bottom: 2px solid #efeeee; background: url(images/text-bg.png);background-size:contain;">
+		    <div class="tag-line">
+		      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
+		    </div>
+		</div>-->
+		<style>
+		.create-mini-web{
+			background-size: cover;
+			color:#fff;
+			background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#fe604b), color-stop(100%,#f09a39));
+			background: -webkit-linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			background: -o-linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			background: -ms-linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			background: linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe604b', endColorstr='#f09a39',GradientType=1 );
+		}
+		.create-mini-web .left-side{
+		  padding-top:25px;
+		  position:relative;
+		}
+		.create-mini-web .left-side strong{
+			font-size: 2.2em;
+			display:block;
+		}
+		.create-mini-web .left-side div{
+		  font-size: 1.4em;
+		}
+		.create-mini-web .right-side{
+		  //padding: 50px 50px 0px 50px;
+		  text-align:center;
+		  position:relative;
+		  height: 310px;
+		   padding-left:0px;
+		
+		}
+		.create-mini-web .right-side img{
+		    width: 100%;
+			height: 100%;
+		}
+		.button{
+			font-size: 1.5em;
+			border: 2px solid #fff;
+			border-radius: 25px;
+			padding: 6px 28px;
+			cursor:pointer;
+			//width: 40%;
+    display: block;
+    text-align: center;
+		}
+		.cover{
+		  position:absolute;
+		  width:100%;
+		  height:100%;
+		  display:block;
+		  top: 0;
+		  left: 0;
+		  padding: 20px 65px 35px 22px;
+		}
+		.tablet-img{
+			height: 222px;
+			background: url(images/tablet_f.PNG);
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			bottom: 0px;
+			width:100%;
+		}
+		@media only screen and (min-width:601px){
+		  .create-mini-web .left-side{
+		     padding:33px;
+		   }
+		   .tablet-img{
+		     height: 265px;
+		   }
+		   .create-mini-web .right-side{
+		     padding:0;
+		   }
+		}
+		@media only screen and (max-width:601px) and (orientation: landscape){
+		   .create-mini-web .right-side{
+		     padding:50px;
+		   }
+		}
+		@media only screen and (min-width:993px){
+		  .create-mini-web .left-side{
+		     padding:50px;
+		   }
+		   .tablet-img{
+		     height: 257px;
+		   }
+		   .create-mini-web .right-side{
+		     padding:0;
+		   }
+		}
+		</style>
+		<div class="col-l12 col-m12 col-s12 create-mini-web">
+		    <div class="row" style="padding:0 45px">
+			   <div class="col-l6 col-m6 col-s12 left-side">
+			     
+			      <strong>Mini Web</strong>
+			      <div>Cretae your mini web with us. Get it done it few minutes and freely public it with #tag.</div>
+				  <br>
+				  
+				  <span class="button  col-l4 col-m8 col-s12">
+				    <i class="icon ion-android-add" style="padding-right:10px;"></i>
+				    Click
+			      </span>
+				  
+			   </div>
+		      <div class="col-l6 col-m6 col-s12 right-side">
+			      <div class="tablet-img">
+
+				   <!-- <span class="cover">
+				     <img src="images/tablet_bg.png" style="height: 100%;width:100%;"/>
+				    </span>-->
+				  </div>
+			   </div>
+
+		    </div>
+		</div>
+		 <div class="col-l12 col-m12 col-s12" style="background: #fff;border-bottom: 2px solid #efeeee; background: url(images/text-bg.png);background-size:contain;">
+		    <div class="tag-line">
+		      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
+		    </div>
+		</div>
+	</div>
+</div>
+<script>
+   function $(className){
+     return document.getElementsByClassName(className);
+   }
+  function getActionBar(){
+    $('overlay')[0].style.display="block";
+    $('action-container')[0].style.bottom=0;
+	return false;
+  }
+  var length=$('action-item').length;
+    for(var i=0;i<length;i++){
+      $('action-item')[i].addEventListener('click', function(){
+        $('overlay')[0].style.display="none";
+        $('action-container')[0].style.bottom=-215;
+    });
+  } 
+  $('search-icon')[0].addEventListener('click', function(){
+    getActionBar();
+  });
+
+ 
+
+ 
+</script>
+ </body>
+</html>
