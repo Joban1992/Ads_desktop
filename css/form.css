@@ -17,7 +17,7 @@
   font-size: 2em;
 }
 .form-container .part1{
-  display:none;
+  //display:none;
   -webkit-transition:all 1s ease;
   position:absolute;
   top: 77px;
@@ -62,11 +62,11 @@
   top:50%;
 }
 .form-container .part2{
-   display:block;
+   //display:block;
    //left:100%;
-   left:0%;
+   //left:0%;
    position:absolute;
-   background:red;
+   //background:red;
   -webkit-transition:all 1s ease;
 }
 .form-container .pagination-container{
