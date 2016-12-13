@@ -11,16 +11,15 @@
 <body>
 <!--Menu Starts-->
   <div class="row form-container">
-   <div class="scroll-btn btn-left">
+   <div class="scroll-btn btn-left" onclick="formSlider(false)">
       <i class="icon ion-android-arrow-dropleft-circle"></i>
    </div>
-   <div class="scroll-btn btn-right">
+   <div class="scroll-btn btn-right" onclick="formSlider(true)">
      <i class="icon ion-android-arrow-dropright-circle"></i>
    </div>
    <div class="pagination-container">
-     <ul>
+     <ul class="pagination-container-ul">
 	   <li class="active"></li>
-	   <li></li>
 	   <li></li>
 	   <li></li>
 	 </ul>
@@ -43,11 +42,60 @@
 	</div>
 	<div class="col-l12 col-m12 col-s12 part2">
 	   <div class="row">
-		 <div class="col-l4">
-		   <input type="text">
+		 <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="name">
+		    <input type="text" placeholder="Name">
+			<i class="icon ion-person"></i>
+		   </label>
 		 </div>
-		 <div class="col-l2" >
-		      <input type="text" />
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="heading">
+		    <input type="text" placeholder="Heading">
+			<i class="icon ion-android-textsms"></i>
+		   </label>
+		 </div>
+		 <div class="col-l8 offset-l2 col-m8 offset-m2 col-s10 offset-s1">
+		    <label for="description">
+		       <textarea placeholder="Description"></textarea>
+			</label>
+		 </div>
+		  <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="link">
+		    <input type="text" placeholder="Link to other website">
+			<i class="icon ion-link"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="phone">
+		    <input type="text" placeholder="Phone">
+			<i class="icon ion-ios-telephone"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="email">
+		    <input type="text" placeholder="Email">
+			<i class="icon ion-email"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="website">
+		    <input type="text" placeholder="Website">
+			<i class="icon ion-android-globe"></i>
+		   </label>
+		 </div>
+		 
+	   </div>
+	</div>
+	<div class="col-l12 col-m12 col-s12 part3">
+	   <div class="row radio-button-container">
+		 <div class="col-l2 offset-l4 col-m3 offset-m3 col-s8 offset-s2  radio-card">
+		   <!--<i class="icon ion-android-unlock"></i>-->
+		   <i class="icon ion-eye"></i>
+		   Preview
+		 </div>
+		 <div class="col-l2 col-m3 col-s8 offset-s2 radio-card radio-card-margin" >
+		   <i class="icon ion-android-add-circle"></i>
+		   Create
 		 </div>
 	   </div>
 	</div>
@@ -55,5 +103,50 @@
   <!--Menu Ends-->
   
 	<script src="js/index.js"></script>
+	<script>
+	  var clickCount = 1;
+	  function formSlider(flag){
+	    var current = clickCount;
+		var next =0;
+		var activeClass="", deactiveClass="", rAactiveClass="", rDeactiveClass="";
+	    if(flag){
+		  //going forward
+		  console.log('right');
+		  clickCount++
+		  next = clickCount;
+		  activeClass = "active-left";
+		  deactiveClass = "deactive-left";
+		  rAactiveClass = "active-right";
+		  rDeactiveClass = "deactive-right";
+		}else{
+		  //going back
+		  console.log('left');
+		  clickCount--;
+		  next = clickCount;
+		  activeClass = "active-right";
+		  deactiveClass = "deactive-right";
+		  rAactiveClass = "active-left";
+		  rDeactiveClass = "deactive-left";
+		}
+	    //current form slid
+		$("part"+current)[0].className="col-l12 col-m12 col-s12 part"+current;
+		$("part"+next)[0].className="col-l12 col-m12 col-s12 part"+next;
+		console.log(("part"+current),("part"+next));
+		console.log("part"+clickCount);
+		 $("part"+current)[0].classList.remove(rAactiveClass);
+		$("part"+next)[0].classList.remove(rDeactiveClass);
+	    $("part"+current)[0].classList.add(deactiveClass);
+		$("part"+next)[0].classList.add(activeClass);
+		var length = $("pagination-container-ul")[0].children.length;
+		//console.log(length);
+		for(var i=0;i<length;i++){
+		  $("pagination-container-ul")[0].children[i].classList.remove("active"); 
+		}
+		console.log(current);
+		$("pagination-container-ul")[0].children[next-1].classList.add("active");
+	  }
+	  
+	  
+	</script>
  </body>
 </html>
