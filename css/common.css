@@ -242,6 +242,7 @@ input, button:focus {
   text-decoration:none;
   color:inherit;
 }
+
 .menu .menu-body ul li a:hover{
   color:#28e3cc;
 }
@@ -291,6 +292,7 @@ input, button:focus {
 .col-s12 {width: 100%;}
 
 @media only screen and (min-width:601px){
+.offset-m0 {margin-left: 0%;}
 .offset-m1 {margin-left: 8.33%;}
 .offset-m2 {margin-left: 16.66%;}
 .offset-m3 {margin-left: 25%;}
