@@ -1,34 +1,39 @@
-.form-container{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url(../images/menubg.svg) center center no-repeat fixed;
+body{
+   background: url(../images/menubg.svg) center center no-repeat fixed;
   background-size: cover;
   background-size: cover;
   background-color: #531eaa;
+}
+.form-container{
+  //position: fixed;
+  width: 90%;
+  margin:0 auto;
+  height: 100%;
+
   z-index: 11;
   top: 0;
   transition:all .5s ease;
   color: #fff;
   text-align: center;
-  overflow:auto;
+  //overflow:auto;
+  overflow:hidden;
 }
 .form-container .form-title{
   font-size: 2em;
 }
-.active-left{
+.form-container .active-left{
   left:0!important;
   display:block!important;
 }
-.deactive-left{
-  left:-100%;
+.form-container .deactive-left{
+  left:-100%!important;;
 }
 .form-container .active-right{
   left:0!important;
   display:block!important;
 }
 .form-container .deactive-right{
-  left:100%;
+  left:100%!important;;
 }
 .form-container .part1{
   display:block;
@@ -37,7 +42,7 @@
   top: 77px;
 }
 .form-container .part3{
-   display:none;
+   //display:none;
   -webkit-transition:all 1s ease;
   position:absolute;
   top: 77px;
@@ -84,7 +89,7 @@
   top:50%;
 }
 .form-container .part2{
-   display:none;
+   //display:none;
    left:100%;
    //left:0;
    position:absolute;
@@ -132,7 +137,7 @@
 .form-container .pagination-container{
   position:fixed;
   bottom:10px;
-  width:100%;
+  width:90%;
   text-align:center;
 }
 .form-container .pagination-container ul{
@@ -254,7 +259,7 @@
   and (orientation: landscape) {
   .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
     margin-top:10px;
-	margin-left:93px;
+	margin-left:80px;
   }
   .form-container .part1 .radio-button-container, .part3 .radio-button-container{
     margin-top:0px;
