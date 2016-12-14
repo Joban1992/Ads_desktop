@@ -11,6 +11,9 @@
 <body>
 <!--Menu Starts-->
   <div class="row form-container">
+    
+    
+
    <div class="scroll-btn btn-left" onclick="formSlider(false)">
       <i class="icon ion-android-arrow-dropleft-circle"></i>
    </div>
@@ -24,9 +27,15 @@
 	   <li></li>
 	 </ul>
    </div>
+   <div class="row" style="    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    width: 105%;">
+ 
     <div class="col-l12 col-m12 col-s12 form-title">
 	   Select the following
 	</div>
+	
 	<div class="col-l12 col-m12 col-s12 part1">
 	   <div class="row radio-button-container">
 		 <div class="col-l2 offset-l4 col-m3 offset-m3 col-s8 offset-s2  radio-card">
@@ -99,21 +108,31 @@
 		 </div>
 	   </div>
 	</div>
+	</div>
+	
+
   </div>
   <!--Menu Ends-->
   
 	<script src="js/index.js"></script>
 	<script>
 	  var clickCount = 1;
+	  $('btn-left')[0].style.display="none";
 	  function formSlider(flag){
 	    var current = clickCount;
 		var next =0;
 		var activeClass="", deactiveClass="", rAactiveClass="", rDeactiveClass="";
+		var moveFlag = false;
+		$('btn-left')[0].style.display="block";
+		$('btn-right')[0].style.display="block";
 	    if(flag){
 		  //going forward
 		  console.log('right');
-		  clickCount++
-		  next = clickCount;
+		  next = clickCount+1;
+		  if($("part"+next).length!=0){
+		    clickCount++; 
+			moveFlag = true;
+		  }
 		  activeClass = "active-left";
 		  deactiveClass = "deactive-left";
 		  rAactiveClass = "active-right";
@@ -121,14 +140,19 @@
 		}else{
 		  //going back
 		  console.log('left');
-		  clickCount--;
-		  next = clickCount;
+		  
+		  next = clickCount-1;
+		  if($("part"+next).length!=0){
+		    clickCount--;  
+			moveFlag = true;
+		  }
 		  activeClass = "active-right";
 		  deactiveClass = "deactive-right";
 		  rAactiveClass = "active-left";
 		  rDeactiveClass = "deactive-left";
 		}
 	    //current form slid
+		if(moveFlag){
 		$("part"+current)[0].className="col-l12 col-m12 col-s12 part"+current;
 		$("part"+next)[0].className="col-l12 col-m12 col-s12 part"+next;
 		console.log(("part"+current),("part"+next));
@@ -144,6 +168,15 @@
 		}
 		console.log(current);
 		$("pagination-container-ul")[0].children[next-1].classList.add("active");
+		if(next==1){
+		 $('btn-left')[0].style.display="none";
+		}
+		if(next==3){
+		 $('btn-right')[0].style.display="none";
+		}
+		}else{
+		  alert('done :: '+next)
+		}
 	  }
 	  
 	  
