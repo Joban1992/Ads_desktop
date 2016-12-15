@@ -106,10 +106,10 @@ ul{
   transform:scaleX(.8);
 }
 
-.container .row{
+ .row{
    width:100%; 
 }
-.container .row::after {
+ .row::after {
   content: "";
   clear: both;
   display: block;
@@ -121,7 +121,7 @@ ul{
   background: #b71c1c;
 }
 .header [class*='col-']{
-  background: rgba(0,0,0,.1);
+  //background: rgba(0,0,0,.1);
 }
 
 .medium-large-logo{
