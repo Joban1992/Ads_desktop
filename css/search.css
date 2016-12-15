@@ -19,7 +19,7 @@ background: url('../images/patterns.jpg');
 .search-box-head{
   text-align:center; 
   padding:0;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 .search-box-head span{
    text-align:left;
@@ -64,4 +64,54 @@ background: url('../images/patterns.jpg');
   //background: #f7f7f7;
   background: url('../images/patterns.jpg');
 }
+.search-desktop{
+  display:none!important;
+}
+.search-mobile{
+  display:block;
+}
+.search-mobile .search-box-head span{
+  border-radius: 0;
+  background: #b71c1c;
+}
+.search-mobile .search-box-head input[type=text]{
+  border-color: transparent transparent #fff transparent;
+}
+@media only screen and (min-width:601px){
+ .search-mobile{
+   display:none;
+ }
+ .search-desktop{
+   display:inline-block!important;
+ }
+}
 
+@media only screen and (min-width:993px){
+ .search-mobile{
+   display:none;
+ }
+ .search-desktop{
+   display:inline-block!important;
+ }
+
+}
+@media only screen and (min-width:1400px){
+  .search-mobile{
+   display:none;
+ }
+ .search-desktop{
+   display:inline-block!important;
+ }
+
+}
+@media (max-device-width:736px) and (orientation:landscape) {
+	
+}
+
+@media (min-device-width:1024px) and (orientation:landscape) {
+
+
+}
+@media (min-device-width:1024px) and (orientation:landscape) {
+
+}
