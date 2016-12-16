@@ -15,6 +15,9 @@ background: url('../images/patterns.jpg');
 ::-webkit-input-placeholder {
   color: #eee;
 }
+.search-mobile ::-webkit-input-placeholder {
+  color: black;
+}
 
 .search-box-head{
   text-align:center; 
@@ -47,6 +50,9 @@ background: url('../images/patterns.jpg');
   font-size:14px;
   color: #fff;
   font-weight:bold;
+}
+.search-mobile .search-box-head input[type=text]{
+  color: black;
 }	
 .search-box-head i.search-icon{
   position: absolute;
@@ -72,10 +78,10 @@ background: url('../images/patterns.jpg');
 }
 .search-mobile .search-box-head span{
   border-radius: 0;
-  background: #b71c1c;
+  background: transparent;
 }
 .search-mobile .search-box-head input[type=text]{
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent black transparent;
 }
 @media only screen and (min-width:601px){
  .search-mobile{
